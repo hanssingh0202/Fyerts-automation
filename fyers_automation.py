@@ -1,17 +1,17 @@
 
 from fyers_apiv3 import fyersModel
 #All information 
-client_id = '3QYQX7SV2R-100'
-secret_key = '2MSTSKFUZB'
-redirect_uri ='https://fyers.in/products/api/'
-user_name ='YH03438'
+client_id = ''#your id
+secret_key = ''# your secret key
+redirect_uri =''# your redirect url
+user_name =''#your username
 
-totp_key='HR6LFQJNMJ5FIHWZCUUK6GUQ2QJROFVL'
+totp_key=''#your totp_key
 #fyers pin
-pin1 ="0"
-pin2 = "2"
-pin3 = "0"
-pin4 = "2"
+pin1 =""# your first digit of pin
+pin2 = ""# your second digit of pin
+pin3 = ""# your third digit of pin
+pin4 = ""# your fourth digit of pin
 
 response_type = "code"  
 state = "sample_state"
