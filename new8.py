@@ -32,15 +32,13 @@ def onmessage(message):
         
         # Calculate the percentage change
         price_change = ((ltp - last_price) / last_price) * 100
-
         # Print the received message
         print("Message received:", message)
-
         # Print the calculated percentage change
         print("Price Change:", price_change)
 
         # Check if the absolute value of the percentage change is greater than or equal to 0.1%
-        if abs(price_change) >= 0.0000001:
+        if abs(price_change) >= 0.1:
             if price_change > 0:
                 # If the price increased by more than 0.1%, print a buy signal in green
                 print(f"{GREEN}Signal: BUY, Price: {ltp}, Time: {current_time}{RESET}")
@@ -92,6 +90,4 @@ fyers = data_ws.FyersDataSocket(
     on_error=onerror,                # Callback function to handle WebSocket errors.
     on_message=onmessage             # Callback function to handle incoming messages from the WebSocket.
 )
-
-# Establish a connection to the Fyers WebSocket
 fyers.connect()
